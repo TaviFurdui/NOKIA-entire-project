@@ -31,7 +31,7 @@ export default class NotificationsContainer extends React.Component {
     componentDidMount()
     {
 
-         axios.get('http://localhost/nokia/citeste_notificare.php')
+         axios.get('http://localhost/NOKIA-entire-project/php/team4/afiseaza_notificare.php')
           .then( response =>{
             console.log(response);
             this.setState({row:response.data});
@@ -56,6 +56,9 @@ export default class NotificationsContainer extends React.Component {
                         <div className = "notification-item">
                             <AiFillCloseCircle className = "Icon danger-icon"></AiFillCloseCircle>
                             <text>{item.MESAJ}</text>
+                            <div className="data_notificare" style = {{textAlign:'right', fontSize:11}} >
+                                {item.DATA_CREAT}
+                            </div>
                         </div>
                     )
                     break;
@@ -65,6 +68,9 @@ export default class NotificationsContainer extends React.Component {
                         <div className = "notification-item">
                             <AiFillWarning className = "Icon warning-icon"></AiFillWarning>
                             <text>{item.MESAJ}</text>
+                            <div className="data_notificare" style = {{textAlign:'right', fontSize:11}} >
+                                {item.DATA_CREAT}
+                            </div>
                         </div>
                     )
                     break;
@@ -74,6 +80,9 @@ export default class NotificationsContainer extends React.Component {
                         <div className = "notification-item">
                             <AiFillInfoCircle className = "Icon info-icon"></AiFillInfoCircle>
                             <text>{item.MESAJ}</text>
+                            <div className="data_notificare" style = {{textAlign:'right', fontSize:11}} >
+                                {item.DATA_CREAT}
+                            </div>
                         </div>
                     )
                     break;
@@ -84,6 +93,9 @@ export default class NotificationsContainer extends React.Component {
                         <div className = "notification-item">
                             <AiFillInfoCircle className = "Icon info-icon"></AiFillInfoCircle>
                             <text>{item.MESAJ}</text>
+                            <div className="data_notificare" style = {{textAlign:'right', fontSize:11}} >
+                                {item.DATA_CREAT}
+                            </div>
                         </div>
                     )
                     break;
